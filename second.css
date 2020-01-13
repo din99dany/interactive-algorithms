@@ -210,3 +210,24 @@ iframe
 }
 
 }
+#CommentArea
+{
+    width: 95%;
+}
+#InArea
+{ 
+    margin-left: 20vw;
+    display: inline-block;
+    width: 40vw;
+}
+#InArea > *
+{
+    width: 50vw;
+    height: 5vh;
+}
+
+#InArea > p
+{
+    margin: 0px;
+    text-align: center;
+}

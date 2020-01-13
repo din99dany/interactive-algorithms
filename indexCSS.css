@@ -1,5 +1,60 @@
 @media screen {
 
+    #Matrix{           
+        position: relative;
+        height: inherit;
+        width: inherit;
+    }
+    #Control{
+        display: inline;
+        position: relative;
+        left:0%;
+    }
+    #Control > button{
+        position: relative;
+        margin-bottom: 1.5vh;
+    }
+    #Matrice{
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+        position: relative;
+    }
+   #Matrice .Element{
+        min-width: 2vw;
+        min-height: 2vw;
+        height: 100%;
+        width: 100%;
+        border: solid;
+        position: relative;
+
+    }
+    .Element:hover{
+        background-color: green;
+    }
+
+    .ElementAnimated{
+        min-width: 2vw;
+        min-height: 2vw;
+        height: 100%;
+        width: 100%;
+        border: solid;
+        position: relative;
+        animation-name: ElementAnimat;
+        animation-duration: 1s;
+    }
+
+    .ElementAnimated:hover{
+        background-color: green;
+    }
+
+    @keyframes ElementAnimat{
+        from  {  background-color: grey; }
+        to { background-color: hotpink; }
+    }
+
+
 html, body
 {
     width: 100%;
@@ -164,8 +219,8 @@ li
 
 #VideoArea
 {
-    left : 25vw;
-    height: 30vh;;
+    left : 0vw;
+    height: 60vh;
 }
 
 @media (max-width: 768px) {
@@ -198,4 +253,26 @@ li
     z-index: 0;
  }
 
+}
+#CommentArea
+{
+    width: 95%;
+}
+#InArea
+{ 
+    margin-left: 20vw;
+    display: inline-block;
+    width: 40vw;
+}
+#InArea > *
+{
+    width: 50vw;
+    height: 5vh;
+}
+
+#InArea > p
+{
+    margin: 0px;
+
+    text-align: center;
 }

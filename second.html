@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="stylesheet" type="text/css" href="second.css">
+        <script src="disjktra.js" ></script>
     </head>
 
     <body>
@@ -72,7 +73,21 @@ Ferrars all spirits his imagine effects amongst neither. It bachelor cheerful of
             
             <iframe width="480" height="360" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" > </iframe>
         </div>
-    
+        
+        <div class="ContentMain" id="CommentArea" >
+            
+            <div id="InArea">
+                <p>Your name</p>
+                <input id='name' type='text'  placeholder="name"/>
+                </br>
+                <p>Comment:</p>
+                <textarea id='comment' style="margin:0px;"> </textarea> 
+                </br>
+                <input type='button' value="Send" onClick="sendInformation()">
+            </div>
+
+            <div id='responseArea'></div>
+        </div>
 
         <div class="footer">
             <p>Credits : Matei Daniel 244</p>
