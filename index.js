@@ -2,8 +2,6 @@ const express = require('express'), bodyParser = require('body-parser');
 const app = express()
 const port = 3000
 
-var someObject = require('./bd.json')
-
 app.use(express.json())
 
 app.use(function(req, res, next) {
@@ -12,7 +10,7 @@ app.use(function(req, res, next) {
     next();
   });
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('I am up'))
 app.use(bodyParser.json())
 
 app.post('/', (req, res) => {

@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="stylesheet" type="text/css" href="second.css">
         <script src="disjktra.js" ></script>
+        <script src="pagecontrol.js"></script>
     </head>
 
     <body>
@@ -16,20 +17,29 @@
         </div>
 
         
-        <div class="NavBar" >
+        <div class="NavBar" id="NavBar" >
         <ul>
             <li><a href="index.html">Home</a></li>
             <li>Info</li>
             <li>Forum</li>
             <li>
-            <div class="MenuZone">
-                <button class="DropMenu">Algorithms</button>
-                <div class="DropMenu-Content">
-                    <a href="#">Dijkstra</a>
-                    <a href="#">Euclid</a>
-                    <a href="#">MST</a>
+                <div class="MenuZone">
+                    <button class="DropMenu">Algorithms</button>
+                    <div class="DropMenu-Content">
+                        <a href="#">Dijkstra</a>
+                        <a href="#">Euclid</a>
+                        <a href="#">MST</a>
+                    </div>
                 </div>
-            </div>
+            </li>    
+            <li>
+                <div class="MenuZone">
+                    <button class="DropMenu">Themes</button>
+                    <div class="DropMenu-Content">
+                        <a href="#" onclick="ChangeTheam2()">Theam2</a>
+                        <a href="#" onclick="ChangeTheam3()">Theam3</a>
+                    </div>
+                </div>
             </li>
         </ul>
         </div>
@@ -89,7 +99,7 @@ Ferrars all spirits his imagine effects amongst neither. It bachelor cheerful of
             <div id='responseArea'></div>
         </div>
 
-        <div class="footer">
+        <div class="footer" id="footer">
             <p>Credits : Matei Daniel 244</p>
         </div>
 

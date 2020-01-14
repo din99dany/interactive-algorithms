@@ -5,63 +5,6 @@ const INFI = 999999;
 var matrix = [];
 var alreadyGenerated = false;
 
-window.onload = function(){
-    getComments();
-}
-
-function getComments(){
-    fetch("http://localhost:3000/comments")
-    .then((data) => { return data.json() })
-    .then((json) => displayComments(json))
-}
-
-function displayComments(data){
-    let responseArea = document.getElementById('responseArea');
-    for (let i = 0; i<data.length; i++){
-        let authorName = document.createElement('P');
-        authorName.innerText = "Auhor : " + data[i]["author"];
-        let commentContent = document.createElement('P');
-        commentContent.innerText = "Comm: " + data[i]["comment"];
-        commentContent.style.margin = "0px";
-        let someRespone = document.createElement('DIV')
-        someRespone.appendChild(authorName)
-        //someRespone.appendChild(document.createElement('BR'))
-        someRespone.appendChild(commentContent);
-        someRespone.style.border = "1px solid black";
-        responseArea.appendChild(someRespone);
-    }
-    
-}
-
-function sendInformation(){
-    let name = document.getElementById('name').value;
-    let comment = document.getElementById('comment').value;
-
-    fetch("http://localhost:3000", {
-        method: 'POST',
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-        'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *client
-        body: JSON.stringify({author: name, comment: comment})
-    }).then((data) => {
-        return data.json()
-    }).then((json)=>{
-        if(json.Status === 'OK'){
-            document.getElementById('responseArea').innerText='Information receieved';
-            setTimeout(function(){ alert("Please refresh"); }, 3000);
-        } else {
-            document.getElementById('responseArea').innerText='Information was not received';
-        }
-        console.log(json);
-    })
-}
-
 function GenerateMatrix()
 {
     if ( alreadyGenerated )

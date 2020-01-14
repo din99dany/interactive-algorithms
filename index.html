@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 
-<html lang="en">
+<html lang="en-US">
 
     <head>
         
@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="stylesheet" type="text/css" href="indexCSS.css">
         <script src="disjktra.js"></script>
-       
+        <script src="pagecontrol.js"></script>
     </head>
 
     <body>
@@ -17,21 +17,31 @@
         <div id="TopImage">
         </div>
 
-        
-        <div class="NavBar" >
+    
+        <div class="NavBar" id="NavBar" >
         <ul>
             <li>Home</li>
             <li>Info</li>
             <li>Forum</li>
             <li>
-            <div class="MenuZone">
-                <button class="DropMenu">Algorithms</button>
-                <div class="DropMenu-Content">
-                    <a href="./second.html">Dijkstra</a>
-                    <a href="#">Euclid</a>
-                    <a href="#">MST</a>
+                <div class="MenuZone">
+                    <button class="DropMenu">Algorithms</button>
+                    <div class="DropMenu-Content">
+                        <a href="./second.html">Dijkstra</a>
+                        <a href="#">Euclid</a>
+                        <a href="#">MST</a>
+                    </div>
                 </div>
-            </div>
+            </li>
+            
+            <li>
+                <div class="MenuZone">
+                        <button class="DropMenu">Themes</button>
+                        <div class="DropMenu-Content">
+                            <a href="#" onclick="ChangeTheam2()">Theam2</a>
+                            <a href="#" onclick="ChangeTheam3()">Theam3</a>
+                        </div>
+                </div>
             </li>
         </ul>
         </div>
@@ -87,7 +97,6 @@
             <img src="./algo-banner.jpg" alt="teapza">
         </div>
 
-
         <div class="ContentMain" id="VideoArea" >
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" > </iframe>
         </div>
@@ -120,7 +129,7 @@
             <div id='responseArea'></div>
         </div>
 
-        <div class="footer">
+        <div class="footer" id="footer">
             <p>Credits : Matei Daniel 244</p>
         </div>
 
